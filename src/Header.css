@@ -1,0 +1,161 @@
+*
+{
+    margin: 0;
+}
+
+#PageHeader
+{
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    min-height: 68px;
+
+    background-color: #FDF1EB;
+
+    color: #725C5C;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#PageTitle
+{
+    display: grid;
+    grid-template-rows: min-content;
+
+    margin-right: auto;
+
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+#PageTitle > h2
+{
+    font-size: 1.4rem;
+
+    height: fit-content;
+}
+
+#PageTitle > h3
+{
+    font-size: 0.9rem;
+}
+
+#SelectLangWrapper
+{
+    display: flex;
+
+    margin-right: 1.5%;
+
+    padding: 7px;
+
+    font-family: 'Quicksand';
+
+    border-width: 0.1rem;
+    border-color: #CCCCCC;
+    border-radius: 0.2rem;
+    border-style: solid;
+
+    cursor: pointer;
+}
+
+#SelectLangWrapper:focus-within
+{
+    outline-style: solid;
+    outline-color: rgb(43, 43, 43);
+    outline-width: 0.2rem;
+    outline-offset: 0.1rem;
+}
+
+#SelectLang
+{
+    /* Propriedades para resetar o estilo padrão do select */
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 0 0 0;
+    margin: 0;
+    width: min-content;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+
+    text-align: center;
+
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+#AcountInfos
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'Msg Img'
+                         'Email Img';
+    column-gap: 0.6rem;
+    
+    font-family: 'Quicksand', sans-serif;
+}
+
+#AcountInfos > .WelcomeMsg
+{
+    grid-area: Msg;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+#AcountInfos > .AcountEmail
+{
+    grid-area: Email;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+#AcountInfos > .Img
+{
+    grid-area: Img;
+
+    position: relative;
+
+    align-self: center;
+
+    height: 1.9rem;
+    aspect-ratio: 1/1;
+    
+    background-image: url('Images/Woman.jpg');
+    background-size: cover;
+    background-position: 10%;
+
+    border-radius: 50% 50%;
+}
+
+#AcountInfos > .Img::after
+{
+    content: "2";
+
+    position: absolute;
+    top: -3px;
+    right: -3px;
+
+    border-radius: 50% 50%;
+
+    width: 0.83rem;
+    height: 0.83rem;
+
+    background-color: #F85959;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.68rem;
+    color: white;
+    font-family: Roboto;
+}

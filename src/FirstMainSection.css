@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+#FirstMainSection
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'H2 Links';
+    column-gap: 20px;
+
+    padding: 15px 25px;
+}
+
+h2
+{
+    grid-area: H2;
+
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #ED7839;
+}
+
+#FirstMainSection > .Links
+{
+    grid-area: Links;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-areas: 'Download Star doi'
+                         'H3 H3 H3';
+    column-gap: 10px;
+
+    max-width: 100%;
+}
+
+#FirstMainSection > .Links > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 31px;
+    width: 100%;
+
+    background-color: #ED7839;
+
+    padding: 3px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+#FirstMainSection > .Links > .Download
+{
+    grid-area: Download;
+}
+
+#FirstMainSection > .Links > .Star
+{
+    grid-area: Star;
+}
+
+#FirstMainSection > .Links > .doi
+{
+    grid-area: doi;
+}
+
+#FirstMainSection > .Links > div > img
+{
+    width: 1rem;
+    aspect-ratio: 1/1;
+}
+
+#FirstMainSection > .Links > .Download > span
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+
+    margin-left: 8px;
+}
+
+#FirstMainSection > .Links > h3
+{
+    grid-area: H3;
+
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #ED7839;
+}
