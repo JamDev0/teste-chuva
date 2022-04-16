@@ -26,6 +26,9 @@
 {
     display: grid;
     grid-template-rows: min-content;
+    grid-template-areas: 'FirstSub'
+                         'Title'
+                         'SecondSub';
 
     margin-right: auto;
 
@@ -35,25 +38,47 @@
 
 #PageTitle > h2
 {
-    font-size: 1.4rem;
+    grid-area: Title;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: clamp(13.5px, 1rem, 22px);
+    color: #725C5C;
 
     height: fit-content;
 }
 
 #PageTitle > h3
 {
-    font-size: 0.9rem;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: clamp(8px, 0.66rem, 14px);
+    color: #725C5C;
+
+}
+
+#PageTitle > .FirstSubTitle
+{
+    grid-area: FirstSub;
+}
+
+#PageTitle > .SecondSubTitle
+{
+    grid-area: SecondSub;
 }
 
 #SelectLangWrapper
 {
     display: flex;
 
-    margin-right: 1.5%;
+    margin-right: 16px;
 
-    padding: 7px;
+    padding: 5px 7px;
 
     font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: clamp(10px ,0.75rem, 15px);
+    color: #333333;
 
     border-width: 0.1rem;
     border-color: #CCCCCC;
@@ -69,6 +94,18 @@
     outline-color: rgb(43, 43, 43);
     outline-width: 0.2rem;
     outline-offset: 0.1rem;
+}
+
+#SelectLangWrapper > .Globe
+{
+    width: clamp(10px ,0.75rem, 15px);
+    aspect-ratio: 1/1;
+}
+
+#SelectLangWrapper > .DropDown
+{
+    width: clamp(8px ,0.5rem, 12px);
+    aspect-ratio: 1/1;
 }
 
 #SelectLang
@@ -88,8 +125,8 @@
 
     text-align: center;
 
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 #AcountInfos
@@ -109,6 +146,11 @@
     grid-area: Msg;
     align-self: flex-end;
     justify-self: flex-end;
+
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: clamp(10px, 0.66rem, 15px);
+    color: #333333;
 }
 
 #AcountInfos > .AcountEmail
@@ -116,6 +158,10 @@
     grid-area: Email;
     align-self: flex-start;
     justify-self: flex-end;
+
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: clamp(11px, 0.71rem, 13px);
 }
 
 #AcountInfos > .Img
@@ -126,7 +172,8 @@
 
     align-self: center;
 
-    height: 1.9rem;
+    
+    height: clamp(20px, 1.5rem, 32px);
     aspect-ratio: 1/1;
     
     background-image: url('Images/Woman.jpg');
@@ -141,13 +188,15 @@
     content: "2";
 
     position: absolute;
-    top: -3px;
-    right: -3px;
+    top: -2px;
+    right: -2px;
 
     border-radius: 50% 50%;
 
-    width: 0.83rem;
-    height: 0.83rem;
+    min-height: 9px;
+    min-width: 9px;
+    width: 45%;
+    height: 45%;
 
     background-color: #F85959;
 
@@ -155,7 +204,7 @@
     justify-content: center;
     align-items: center;
 
-    font-size: 0.68rem;
+    font-size: clamp(7px, 0.55rem, 11px);
     color: white;
     font-family: Roboto;
 }

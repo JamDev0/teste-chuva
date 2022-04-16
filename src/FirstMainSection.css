@@ -9,8 +9,11 @@
 {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-areas: 'H2 Links';
-    column-gap: 20px;
+    grid-template-rows: min-content 365px;
+    grid-template-areas: 'H2 Links'
+                         'Video Details';
+    column-gap: 30px;
+    row-gap: 20px;
 
     padding: 15px 25px;
 }
@@ -21,9 +24,12 @@ h2
 
     font-family: Roboto;
     font-weight: 900;
-    font-size: 20px;
+    font-size: clamp(13px, 1.05rem, 21px);
     letter-spacing: 0.05em;
     color: #ED7839;
+
+    height: 100%;
+    vertical-align: middle;
 }
 
 #FirstMainSection > .Links
@@ -74,7 +80,7 @@ h2
 
 #FirstMainSection > .Links > div > img
 {
-    width: 1rem;
+    width: clamp(11px, 0.8rem, 18px);
     aspect-ratio: 1/1;
 }
 
@@ -83,7 +89,7 @@ h2
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: clamp(11px, 0.8rem, 18px);
     color: white;
 
     margin-left: 8px;
@@ -95,7 +101,232 @@ h2
 
     font-family: Roboto;
     font-weight: 500;
-    font-size: 14px;
+    font-size: clamp(10px, 0.65rem, 15px);
     letter-spacing: 0.05em;
     color: #ED7839;
+}
+
+#FirstMainSection > .VideoWrapper
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+
+    grid-area: Video;
+    
+    width: 100%;
+    height: 100%;
+
+    border-radius: 3px;
+}
+
+#FirstMainSection > .VideoWrapper > video
+{
+    width: 100%;
+    
+    border: none;
+    border-radius: 3px;
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos
+{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 35px 25px;
+
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos > h2
+{
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: clamp(17px, 1.5px, 25px);
+    color: white;
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos > div
+{
+    display: grid;
+
+    grid-template-areas: 'Image H2'
+                         'Image H3';
+    
+    column-gap: 20px;
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos > div > img
+{
+    grid-area: Image;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    border-radius: 50% 50%;
+
+    outline-color: #ED7839;
+    outline-offset: 3px;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos > div > h2
+{
+    grid-area: H2;
+
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: clamp(20px, 1.6rem, 34px);
+    color: white;
+
+    height: min-content;
+}
+
+#FirstMainSection > .VideoWrapper > .VideoInfos > div > h3
+{
+    grid-area: H3;
+
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: clamp(13px, 0.9rem, 20px);
+    color: white;
+
+    height: min-content;
+}
+
+#FirstMainSection > .Details
+{
+    grid-area: Details;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-rows: min-content auto;
+
+    grid-template-areas: 'Title'
+                         'Content';
+
+    border-color: #ECECEC;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+
+}
+
+#FirstMainSection > .Details > h2
+{
+    grid-area: Title;
+
+    background-color: #FDF1EB;
+    
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: clamp(13px, 0.9rem, 20px);
+    color: #4E4E4E;
+    
+    padding: 8px;
+    border-bottom-color: #ECECEC;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+#FirstMainSection > .Details > section
+{
+    grid-area: Content;
+    
+    overflow-y: scroll;
+    
+    height: 100%;
+    
+    padding: 10px 8px;
+
+    font-family: 'Quicksand';
+    color: #5C5C5C;
+}
+
+#FirstMainSection > .Details > section::-webkit-scrollbar
+{
+    width: 4px;
+
+    left: -10px;
+}
+
+#FirstMainSection > .Details > section::-webkit-scrollbar-track
+{
+    background-color: #E7E7E7;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+}
+
+#FirstMainSection > .Details > section::-webkit-scrollbar-button
+{
+    display: none;
+}
+
+#FirstMainSection > .Details > section::-webkit-scrollbar-thumb
+{
+    background-color: #BFBFBF;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#FirstMainSection > .Details > section > .WrapperFirstK
+{
+    margin-bottom: 35px;
+}
+
+#FirstMainSection > .Details > section > .WrapperFirstK >  .FirsKinOfInfoInP
+{
+    font-size: clamp(8px, 0.65rem, 12px);
+}
+
+#FirstMainSection > .Details > section >  .WrapperFirsK > .FirsKinOfInfoInP > strong
+{
+    font-weight: 700;
+}
+
+#FirstMainSection > .Details > section > h3
+{
+    font-size: clamp(9.5px, 0.7rem , 14px);
+
+    font-weight: 700;
+}
+
+#FirstMainSection > .Details > section > ul
+{
+    list-style: none;
+
+    font-size: clamp(9.5px, 0.7rem , 14px);
+    font-weight: 400;
+
+    padding: 0;
+
+    margin-bottom: 50px;
+}
+
+#FirstMainSection > .Details > section > div > .SecondKindOfInfoInP
+{
+    font-size: clamp(6px, 0.5rem, 10px);
 }

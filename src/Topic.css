@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#Topic
+{
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+#Topic > .Coment
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 8px 13px;
+}
+
+#Topic > .Coment > h2
+{
+    font-family: 'Quicksand';
+    font-size: clamp(10.5px, 0.8rem, 16px);
+    font-weight: 700;
+    color: #ED7839;
+
+    margin-bottom: 4px;
+}
+
+#Topic > .Coment > h3
+{
+    font-family: 'Quicksand';
+    font-size: clamp(8px, 0.65rem, 12px);
+    font-weight: 500;
+    color: #5C5C5C;
+
+    margin-bottom: 11px;
+}
+
+#Topic > .Coment > p
+{
+    font-family: 'Quicksand';
+    font-size: clamp(9px, 0.7rem, 14px);
+    font-weight: 400;
+    color: #4D4D4D;
+
+    margin-bottom: 11px;
+}
+
+#Topic > .Coment > .Interactions
+{
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+}
+
+#Topic > .Coment > .Interactions > .MoreInfo
+{
+    height: clamp(12px, 1rem, 18px);
+
+    
+    cursor: pointer;
+}
+
+#Topic > .Coment > .Interactions > .Like
+{
+    padding: 1px 13px;
+
+    width: fit-content;
+
+    background-color: #ED7839;
+
+    border-radius: 2px;
+
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+
+    cursor: pointer;
+}
+
+#Topic > .Coment > .Interactions > .Like > img
+{
+    width: clamp(9px, 0.7rem, 14px);
+    aspect-ratio: 1/1;
+}
+
+#Topic > .Coment > .Interactions > span
+{
+    font-family: 'Segoe UI';
+    font-size: clamp(9px, 0.7rem, 14px);
+    font-weight: 350;
+    color: #757575;
+}
+
+#Answers > div
+{
+    position: relative;
+
+    width: 100%;
+
+    border-top: 2px solid #E7E7E7;
+
+    padding: 8px 13px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    background-color: #F8F8F8;
+}
+
+#Answers > div > h3
+{
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: clamp(9px, 0.7rem, 14px);
+    color: #5C5C5C;
+}
+
+#Answers > div > div
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#Answers > div > div > span
+{
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: clamp(9px, 0.7rem, 14px);
+    color: #ED7839;
+
+    margin-right: 15px;
+}
+
+#Answers > div > div > img
+{
+    height: clamp(9px, 0.7rem, 14px);
+}
+
+#Answers > div > p
+{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+#Answers > .SubAnswer
+{
+    background-color: white;
+}
