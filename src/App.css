@@ -19,27 +19,4 @@
 #Main
 {
     grid-area: Main;
-
-    grid-template-areas: 'Header'
-                         'FirsMainSection'
-                         'SecondMainSection';
-}
-
-#PageHeader
-{
-    grid-area: Header;
-
-    max-width: 100%;
-}
-
-#FirstMainSection
-{
-    grid-area: FirsMainSection;
-}
-
-#SecondMainSection
-{
-    grid-area: SecondMainSection;
-
-    margin: 15px 25px 15px 25px;
 }

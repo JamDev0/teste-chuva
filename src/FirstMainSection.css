@@ -266,8 +266,6 @@ h2
 #FirstMainSection > .Details > section::-webkit-scrollbar
 {
     width: 4px;
-
-    left: -10px;
 }
 
 #FirstMainSection > .Details > section::-webkit-scrollbar-track

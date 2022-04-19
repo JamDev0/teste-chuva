@@ -11,6 +11,7 @@ function Header()
                 <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
                 <h3 className='SecondSubTitle'>ISSN:1234-5678</h3>
             </div>
+
             <div id='SelectLangWrapper' tabIndex={0}>
                 <img className='Globe' src={GlobeSvg}></img>
                 <select id='SelectLang'>
@@ -19,6 +20,7 @@ function Header()
                 </select>
                 <img className='DropDown' src={DropDownSvg}></img>
             </div>
+            
             <div id='AcountInfos'>
                 <span className='WelcomeMsg'>Bem vindo!</span>
                 <span className='AcountEmail'>alguem12@galoascience.com</span>
